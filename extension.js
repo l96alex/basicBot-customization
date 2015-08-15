@@ -112,6 +112,6 @@
     }));
 
     // Start the bot and extend it when it has loaded.
-    $.getScript("https://raw.githubusercontent.com/l96alex/simplebot/master/simplebot.js", extend);
+    $.getScript("https://cdn.rawgit.com/l96alex/simplebot/master/simplebot.js", extend);
 
 }).call(this);
