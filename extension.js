@@ -1,7 +1,7 @@
 (function () {
 
     // Change this to your GitHub username so you don't have to modify so many things.
-    var fork = "Yemasthui";
+    var fork = "l96alex";
 
     // Define our function responsible for extending the bot.
     function extend() {
@@ -26,14 +26,14 @@
 
         // Example code for a bot command:
         bot.commands.baconCommand = {
-            command: 'bacon',  // The command to be called. With the standard command literal this would be: !bacon
+            command: 'join',  // The command to be called. With the standard command literal this would be: !bacon
             rank: 'user', // Minimum user permission to use the command
             type: 'exact', // Specify if it can accept variables or not (if so, these have to be handled yourself through the chat.message
               functionality: function (chat, cmd) {
                 if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                 if (!bot.commands.executable(this.rank, chat)) return void (0);
                 else {
-                  API.sendChat("/me Bacon!!!");
+                  API.sendChat("/me This command does not work here!");
                 }
               }
             };
@@ -51,26 +51,26 @@
       chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
       scriptLink: "https://rawgit.com/Yemasthui/basicBot/master/basicBot.js",
       roomLock: false, // Requires an extension to re-load the script
-      startupCap: 1, // 1-200
-      startupVolume: 0, // 0-100
-      startupEmoji: false, // true or false
+      startupCap: 10, // 1-200
+      startupVolume: 15, // 0-100
+      startupEmoji: true, // true or false
       autowoot: true,
       autoskip: false,
-      smartSkip: true,
+      smartSkip: false,
       cmdDeletion: true,
-      maximumAfk: 120,
-      afkRemoval: true,
+      maximumAfk: 1200000,
+      afkRemoval: false,
       maximumDc: 60,
       bouncerPlus: true,
-      blacklistEnabled: true,
+      blacklistEnabled: false,
       lockdownEnabled: false,
       lockGuard: false,
       maximumLocktime: 10,
-      cycleGuard: true,
+      cycleGuard: false,
       maximumCycletime: 10,
       voteSkip: false,
-      voteSkipLimit: 10,
-      historySkip: false,
+      voteSkipLimit: 25,
+      historySkip: true,
       timeGuard: true,
       maximumSongLength: 10,
       autodisable: true,
@@ -90,10 +90,10 @@
       afkRankCheck: "ambassador",
       motdEnabled: false,
       motdInterval: 5,
-      motd: "Temporary Message of the Day",
+      motd: "Error",
       filterChat: true,
       etaRestriction: false,
-      welcome: true,
+      welcome: false,
       opLink: null,
       rulesLink: null,
       themeLink: null,
@@ -102,7 +102,7 @@
       website: null,
       intervalMessages: [],
       messageInterval: 5,
-      songstats: true,
+      songstats: false,
       commandLiteral: "!",
       blacklists: {
         NSFW: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/NSFWlist.json",
